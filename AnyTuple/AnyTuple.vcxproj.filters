@@ -4,6 +4,9 @@
     <Filter Include="source">
       <UniqueIdentifier>{10611372-ab04-400b-b269-50e86b7b7bff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="tests">
+      <UniqueIdentifier>{3802d1cf-fddc-4f6e-a8e6-c7968c4b9d40}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="any_tuple.h">
@@ -12,5 +15,13 @@
     <ClInclude Include="typed_tuple.h">
       <Filter>source</Filter>
     </ClInclude>
+    <ClInclude Include="typed_tuple_detail.h">
+      <Filter>source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="typed_tuple_test.cpp">
+      <Filter>tests</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

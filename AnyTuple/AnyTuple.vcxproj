@@ -117,6 +117,10 @@
   <ItemGroup>
     <ClInclude Include="any_tuple.h" />
     <ClInclude Include="typed_tuple.h" />
+    <ClInclude Include="typed_tuple_detail.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="typed_tuple_test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
