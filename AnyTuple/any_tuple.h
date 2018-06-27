@@ -1,5 +1,5 @@
 #pragma once
-#include <tuple>
+#include "typed_tuple.h"
 
 namespace mkato {
 
@@ -28,10 +28,10 @@ namespace mkato {
 
 
 	//	if T exists return T's value (const), else return default value
-		template <class T> const T& getWithDefault(const T& defval) const;
+		template <class T> const T& getWith(const T& defval) const;
 
 	//	if T exists return T's value (not const), else return default value
-		template <class T> T& getWithDefault(const T& defval);
+		template <class T> T& getWith(const T& defval);
 
 
 	//	get T's value to out (const), return true if T exists
@@ -52,36 +52,36 @@ namespace mkato {
 
 	//	return several T's values (not const), throw exception if any T doesn't exist.
 		template <class... Types>
-		std::tuple<const Types&...> get() const;
+		TypedTuple<const Types&...> get() const;
 
 	//	return several T's values (const), throw exception if any T doesn't exist.
 		template <class... Types>
-		std::tuple<Types&...> get();
+		TypedTuple<Types&...> get();
 
 
 	//	return several T's values (const) with default values by arguments
 		template <class... Types>
-		std::tuple<const Types&...> getWithDefault(const Types&... defvals) const;
+		TypedTuple<const Types&...> getWith(const Types&... defvals) const;
 
 	//	return several T's values (not const) with default values by arguments
 		template <class... Types>
-		std::tuple<      Types&...> getWithDefault(const Types&... defvals);
+		TypedTuple<      Types&...> getWith(const Types&... defvals);
 
 	//	return several T's values (const) with default values by standard tuple
 		template <class... Types>
-		std::tuple<const Types&...> getWithDefault(const std::tuple<Types...>& defvals) const;
+		TypedTuple<const Types&...> getWith(const TypedTuple<Types...>& defvals) const;
 
 	//	return several T's values (not const) with default values by standard tuple
 		template <class... Types>
-		std::tuple<      Types&...> getWithDefault(const std::tuple<Types...>& defvals);
+		TypedTuple<      Types&...> getWith(const TypedTuple<Types...>& defvals);
 
 	//	return several T's values (const) with default values by this type
 		template <class... Types>
-		std::tuple<const Types&...> getWithDefault(const This& defvals) const;
+		TypedTuple<const Types&...> getWith(const This& defvals) const;
 
 	//	return several T's values (not const) with default values by this type
 		template <class... Types>
-		std::tuple<      Types&...> getWithDefault(const This& defvals);
+		TypedTuple<      Types&...> getWith(const This& defvals);
 
 
 	//	get T's value to out (const), return true if T exists
@@ -104,11 +104,11 @@ namespace mkato {
 
 	//	return const pointer to T's value, return NULL if T doesn't exist.
 		template <class... Types>
-		std::tuple<const Types*...> getPtr() const;
+		TypedTuple<const Types*...> getPtr() const;
 
 	//	return not const pointer to T's value, return NULL if T doesn't exist.
 		template <class... Types>
-		std::tuple<Types*...>  getPtr();
+		TypedTuple<Types*...>  getPtr();
 
 
 

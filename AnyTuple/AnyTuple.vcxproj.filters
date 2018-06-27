@@ -9,5 +9,8 @@
     <ClInclude Include="any_tuple.h">
       <Filter>source</Filter>
     </ClInclude>
+    <ClInclude Include="typed_tuple.h">
+      <Filter>source</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
